@@ -56,7 +56,7 @@ describe("Schema Validation Tests", () => {
                 "totalResponses": "",
                 "pageCount": ""
             };
-            const expected1 = { message: "\"responses[0].questions[0].id\" must be a string. \"responses[0].questions[0].type\" must be a string. \"responses[0].questions[0].name\" must be a string. \"responses[0].questions[0].value\" does not match any of the allowed types. \"totalResponses\" must be a number. \"pageCount\" must be a number" };
+            const expected1 = { message: "\"responses[0].questions[0].id\" must be a string. \"responses[0].questions[0].type\" must be a string. \"responses[0].questions[0].name\" must be a string. \"responses[0].questions[0].value\" must be one of [string, number]. \"totalResponses\" must be a number. \"pageCount\" must be a number" };
             expect(() => {
                 validateResponseSchema(data)
             }).toThrow(expected1);

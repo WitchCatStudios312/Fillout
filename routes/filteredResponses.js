@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
             response = filteredResponse;
         } 
          else {
-            response = filloutAPIResponse;
+            response = filloutAPIResponse.data;
         } 
         res.send(response).status(200);
     } catch (err) {

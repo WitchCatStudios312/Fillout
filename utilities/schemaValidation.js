@@ -5,7 +5,7 @@ const validateResponseSchema = (json) => {
             id: Joi.string().required(),
             type: Joi.string().required(),
             name: Joi.string().required(),
-            value: Joi.alternatives().match('one').try(Joi.string(), Joi.number()).required().allow(null),
+            value: Joi.alternatives().match('any').try(Joi.string(), Joi.number()).required().allow(null),
     });
     const responseSchema = Joi.object({
         responses: Joi.array()
