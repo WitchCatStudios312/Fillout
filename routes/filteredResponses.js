@@ -24,7 +24,6 @@ router.get('/', async (req, res) => {
          else {
             response = filloutAPIResponse;
         } 
-        if(!response) res.send('Not found').status(404);
         res.send(response).status(200);
     } catch (err) {
         res.send(err.message).status(err.status);
